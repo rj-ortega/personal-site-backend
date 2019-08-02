@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Entry.destroy_all()
+User.destroy_all()
+
+rando = User.create({ name: "Rando" })
+
+Entry.create({ user_id: rando.id, message: "I don't know what I'm doing" })
